@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 E-commerce Admin Dashboard Sidebar
 
-## Getting Started
+A fully responsive, dynamic, and role-based Sidebar component built with **Next.js**, **Tailwind CSS**, and **React Icons**. This sidebar supports roles like:
 
-First, run the development server:
+- 👑 Super Admin
+- 🛠️ Admin
+- 🏪 Vendors
+- 💳 Accounts
+- 👮 Moderators
+
+## 🚀 Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+## 📁 Project Structure
+
+/components
+└── sidebar/
+└── Sidebar.jsx
+/layout
+└── MainLayout.jsx
+
+yaml
+Copy
+Edit
+
+---
+
+## 📸 Preview
+
+![Sidebar Demo](https://via.placeholder.com/1200x600?text=Sidebar+Preview) <!-- Replace with your own screenshot -->
+
+---
+
+## 🧠 Features
+
+- ✅ Role-based navigation menu
+- ✅ Mobile responsive with sidebar toggle
+- ✅ Clean and minimal UI
+- ✅ Dynamic sidebar content based on role
+- ✅ React Icons integrated
+
+---
+
+## 📦 Installation
 
 ```bash
+git clone https://github.com/your-username/ecommerce-sidebar.git
+cd ecommerce-sidebar
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧩 Usage
+Import and use the Sidebar inside your layout:
+jsx
+Copy
+Edit
+import Sidebar from "@/components/sidebar/Sidebar";
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+const MainLayout = ({ children }) => {
+  return (
+    <div className="flex">
+      <Sidebar role="super-admin" />
+      <div className="flex-1 lg:ml-64 p-6">
+        {children}
+      </div>
+    </div>
+  );
+};
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+export default MainLayout;
+Available Roles:
+js
+Copy
+Edit
+"super-admin"
+"admin"
+"vendors"
+"accounts"
+"moderators"
+🛠️ Customize
+Add or remove roles from ROLE_MENUS in Sidebar.jsx.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Replace icons with your preferred ones from react-icons.
 
-## Learn More
+Integrate real authentication and route guards to determine user roles dynamically.
 
-To learn more about Next.js, take a look at the following resources:
+🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📄 License
+MIT
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💬 Questions?
+Feel free to reach out via GitHub Issues or email me.
 
-## Deploy on Vercel
+Designed & developed with ❤️ by Your Name
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+yaml
+Copy
+Edit
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### ✅ Next Steps
+
+- Replace `your-username` with your GitHub username.
+- Add a real image or GIF to `![Sidebar Demo](...)`.
+- Include a `LICENSE` file if you want others to use your code freely.
+
+Let me know if you want me to generate a `LICENSE` or `.gitignore` as well!
